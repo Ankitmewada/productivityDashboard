@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --pri: #f8f4e1;
   --sec: #381c0a;
   --tri1: #feba17;
@@ -51,7 +51,7 @@ body {
     width: 100%;
     height: 60px;
     background-color: var(--tri2);
-} */
+} 
 
 section.allElems {
   width: 100%;
@@ -124,14 +124,14 @@ header .header2 h4 {
   gap: 40px;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  /* padding-top: 30px; */
+
 }
 
 .elem {
   height: 300px;
   width: 255px;
   background-color: var(--tri1);
-  /* padding: 30px 40px; */
+
   border-radius: 10px;
   font-size: 20px;
   overflow: hidden;
@@ -376,10 +376,9 @@ header .header2 h4 {
 .mark-imp input label {
   font-size: 20px;
 }
-/* todocomplete */
 
 .daily-planner-fullpage {
-  /* display: block; */
+
 }
 .daily-planner-fullpage h2 {
   font-size: 60px;
@@ -433,15 +432,13 @@ header .header2 h4 {
   outline: none;
 }
 
-/* motivation quote */
+
 
 .motivation-fullpage {
-  /* display: block; */
   position: relative;
 }
 
 .motivation-fullpage .motivation-container {
-  /* height: 400px; */
   width: 650px;
   background-color: var(--tri2);
   position: absolute;
@@ -510,7 +507,7 @@ header .header2 h4 {
 }
 .motivation-3 h2 {
   background-color: var(--tri2);
-  /* color: var(--pri); */
+
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -528,7 +525,7 @@ header .header2 h4 {
 }
 
 .pomodoro-fullpage {
-  /* display: block; */
+
   position: relative;
 }
 .pomodoro-fullpage h2 {
@@ -622,4 +619,485 @@ nav {
 
 .theme:active {
   scale: 0.7;
+} */
+
+
+/* ========================== */
+/* ======== YOUR CSS ======== */
+/* ========================== */
+
+:root {
+  --pri: #f8f4e1;
+  --sec: #381c0a;
+  --tri1: #feba17;
+  --tri2: #74512d;
+  --green: rgb(9, 138, 89);
+  --blue: rgb(0, 191, 255);
+  --black: black;
+}
+
+@font-face {
+  font-family: aeonik;
+  font-weight: 200;
+  src: url(./AeonikTRIAL-Light.otf);
+}
+@font-face {
+  font-family: aeonik;
+  font-weight: 500;
+  src: url(./AeonikTRIAL-Regular.otf);
+}
+@font-face {
+  font-family: aeonik;
+  font-weight: 700;
+  src: url(./AeonikTRIAL-Bold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--pri);
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+  font-family: aeonik;
+  font-weight: 500;
+  position: fixed;
+}
+
+section.allElems {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: absolute;
+  padding: 20px;
+  margin-top: 15px;
+}
+.allElems header {
+  height: 250px;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background-image: url(https://images.unsplash.com/photo-1717361281130-f10a587180a2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+header .header1 h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+header .header1 h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+header .header1 h4 {
+  font-size: 35px;
+  font-weight: 500;
+}
+header .header2 h2 {
+  font-size: 50px;
+  font-weight: 700;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+header .header2 h3 {
+  font-size: 25px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+header .header2 h4 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.allElems .allFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  justify-content: space-around;
+}
+
+.elem {
+  height: 300px;
+  width: 255px;
+  background-color: var(--tri1);
+  border-radius: 10px;
+  font-size: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  box-shadow: 0 1px 5px var(--black);
+}
+
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.elem h2 {
+  position: absolute;
+  bottom: 4%;
+  right: 5%;
+  font-weight: 500;
+  font-size: 20px;
+}
+.elem:active {
+  scale: 0.97;
+}
+
+/* fullElem */
+.fullElem {
+  height: 100%;
+  width: 100%;
+  background-color: #381c0a;
+  padding: 30px;
+  display: none;
+  position: absolute;
+}
+
+.back {
+  position: absolute;
+  right: 5%;
+  background-color: red;
+  border-radius: 10px;
+  padding: 10px 11px;
+  border: none;
+  font-weight: 700;
+  font-size: 20px;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+.back:active {
+  scale: 0.9;
+}
+
+/* todo */
+.todo-list-fullpage h2 {
+  font-size: 30px;
+}
+.todo-list-fullpage .todo-container {
+  height: 80%;
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo-container .addTask {
+  width: 33%;
+  height: 100%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+}
+.todo-container .allTask {
+  width: 65%;
+  height: 100%;
+  background-color: var(--tri2);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  overflow: auto;
+}
+
+/* tasks */
+.task {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--pri);
+  padding: 15px 25px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.task h5 {
+  font-size: 25px;
+  color: var(--sec);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.task h5 span {
+  font-size: 6px;
+  background-color: red;
+  color: var(--pri);
+  padding: 4px 5px;
+  border-radius: 50px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.task button {
+  padding: 10px 15px;
+  color: var(--pri);
+  border-radius: 5px;
+  background-color: green;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* daily planner */
+.daily-planner-fullpage h2 {
+  font-size: 60px;
+}
+.daily-planner-fullpage .day-planner {
+  background-color: var(--tri2);
+  height: 90%;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.day-planner .day-planner-time {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 49%;
+  margin-bottom: 10px;
+}
+.day-planner .day-planner-time p {
+  position: absolute;
+  top: 5%;
+  left: 0.5%;
+  font-weight: 700;
+}
+.day-planner .day-planner-time input {
+  padding: 20px 30px;
+  width: 100%;
+  border: none;
+  background-color: var(--sec);
+  border-radius: 10px;
+  font-size: 27px;
+  padding-top: 30px;
+  outline: none;
+}
+
+/* motivation */
+.motivation-fullpage {
+  position: relative;
+}
+.motivation-fullpage .motivation-container {
+  width: 650px;
+  background-color: var(--tri2);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+.motivation-container::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 30px;
+  scale: 1.15;
+  filter: blur(140px);
+  z-index: 8;
+  background-color: var(--tri1);
+}
+
+/* pomodoro */
+.pomodoro-fullpage {
+  position: relative;
+}
+.pomodoro-fullpage h2 {
+  font-size: 50px;
+}
+.pomo-timer {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.pomo-timer h1 {
+  font-size: 100px;
+}
+
+.pomo-timer button {
+  padding: 10px 20px;
+  background-color: var(--tri2);
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-left: 6px;
+  box-shadow: 3px 3px 4px var(--black);
+  transition: all ease 0.2s;
+  font-weight: 700;
+}
+
+.pomodoro-fullpage .session {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--tri1);
+  padding: 12px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+/* navbar */
+nav {
+  height: 60px;
+  width: 100%;
+  padding: 30px 20px;
+  margin-bottom: 25px;
+}
+.nav-in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--tri2);
+  padding: 10px 25px;
+  border-radius: 10px;
+}
+.nav-in h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.theme {
+  background-color: var(--pri);
+  padding: 7px;
+  border-radius: 50%;
+  transition: all ease 0.18s;
+}
+.theme i {
+  color: var(--sec);
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.theme:active {
+  scale: 0.7;
+}
+
+/* ========================================================== */
+/* ================= RESPONSIVE START ======================== */
+/* ========================================================== */
+
+/* Tablets: 1024px */
+@media (max-width: 1024px) {
+  header .header1 h1 {
+    font-size: 45px;
+  }
+  header .header2 h2 {
+    font-size: 35px;
+  }
+
+  .motivation-container {
+    width: 80%;
+  }
+
+  .pomo-timer h1 {
+    font-size: 70px;
+  }
+}
+
+/* Mobile large: 768px */
+@media (max-width: 768px) {
+  nav .nav-in h2 {
+    font-size: 22px;
+  }
+
+  .allElems header {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+  }
+
+  .elem {
+    width: 45%;
+    height: 220px;
+  }
+
+  .todo-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .addTask, 
+  .allTask {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .day-planner-time {
+    width: 100% !important;
+  }
+
+  .motivation-container {
+    width: 90%;
+  }
+
+  .pomo-timer h1 {
+    font-size: 55px;
+  }
+}
+
+/* Mobile small: 480px */
+@media (max-width: 480px) {
+  nav .nav-in {
+    padding: 10px 15px;
+  }
+  nav .nav-in h2 {
+    font-size: 18px;
+  }
+
+  .elem {
+    width: 100%;
+    height: 200px;
+  }
+
+  header .header1 h1 {
+    font-size: 35px;
+  }
+  header .header1 h2 {
+    font-size: 20px;
+  }
+
+  .motivation-container {
+    width: 95%;
+  }
+
+  .pomo-timer h1 {
+    font-size: 45px;
+  }
+  .pomo-timer button {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
 }
